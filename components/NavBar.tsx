@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const navigation = [
   {
@@ -43,7 +45,16 @@ export default function NavBar() {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <span className="text-2xl font-bold text-gray-900">NYTech</span>
+            <Link href="/"> 
+                <Image
+                    src="/images/nytech-logo.svg"
+                    alt="NYTech Logo"
+                    width={120} // This will adjust automatically while maintaining height
+                    height={40}
+                    priority
+                    className="h-10 w-auto" // This ensures the width adjusts automatically
+                />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
