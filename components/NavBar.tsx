@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import NavDropdown from './NavDropdown'
 
 const navigation = [
   {
@@ -12,7 +13,9 @@ const navigation = [
     children: [
       { 
         name: 'NY Tech Pulse', 
-        href: '#ai' 
+        description: "Weekly NY Tech Updates",
+        href: 'https://nytechpulse.beehiiv.com', 
+        external: true  // Add this flag for external links
       },
       { 
         name: 'NY Tech AI',
@@ -20,7 +23,7 @@ const navigation = [
       },
     ],
   },
-  { name: 'Events', href: '#events' },
+  { name: 'Events', href: 'https://lu.ma/nytechcommunity', external: true },
   {
     name: 'Resources',
     href: '#resources',
@@ -31,7 +34,7 @@ const navigation = [
       { name: 'AI Communities', href: '#creativity' },
     ],
   },
-  { name: 'Careers', href: '#careers' },
+  { name: 'Careers', href: 'https://www.nytechcareer.com', external: true },
   { name: 'Products', href: '/products' },
 ]
 
@@ -62,34 +65,15 @@ export default function NavBar() {
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.children ? (
-                  <div
-                    className="group relative"
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <button className="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">
-                      {item.name}
-                      <ChevronDown className="ml-1 h-4 w-4" />
-                    </button>
-                    {activeDropdown === item.name && (
-                      <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                        <div className="py-1">
-                          {item.children.map((child) => (
-                            <a
-                              key={child.name}
-                              href={child.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              {child.name}
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  <NavDropdown
+                    item={item}
+                    activeDropdown={activeDropdown}
+                    setActiveDropdown={setActiveDropdown}
+                  />
                 ) : (
                   <a
                     href={item.href}
+                    {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900"
                   >
                     {item.name}
