@@ -9,7 +9,7 @@ const Footer = () => {
     platform: [
       { name: 'Newsletter', href: '#newsletter', external: true },
       { name: 'Events', href: '#events', external: true },
-      { name: 'Resources', href: '/resources' },
+      { name: 'Products', href: '/products' },
       { name: 'Careers', href: '/careers' }
     ],
     services: [
@@ -35,13 +35,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand section */}
           <div className="lg:col-span-2">
-            <Image
-              src="/images/logo.svg"
-              alt="NYTech Logo"
-              width={120}
-              height={40}
-              className="h-8 w-auto mb-4"
-            />
+            <Link href="/">
+                <Image
+                src="/images/nytech-logo.svg"
+                alt="NYTech Logo"
+                width={120}
+                height={40}
+                className="h-8 w-auto mb-4"
+                />
+            </Link>
             <p className="text-gray-600 mb-4 max-w-sm">
               Building bridges between human potential and AI capabilities. Exploring and building AI-powered innovations.
             </p>
