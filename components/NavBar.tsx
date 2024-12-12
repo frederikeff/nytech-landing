@@ -19,23 +19,27 @@ const navigation = [
       },
       { 
         name: 'NY Tech AI',
-        href: '#tech' 
+        description: "The Builders Guide",
+        href: 'https://nytechai.beehiiv.com', 
+        external: true
       },
     ],
   },
   { name: 'Events', href: 'https://lu.ma/nytechcommunity', external: true },
   {
-    name: 'Resources',
-    href: '#resources',
+    name: 'StreamFlow',
+    href: '/stream',
     children: [
-      { name: 'AI for Creators', href: '#ai' },
-      { name: 'AI for Careers', href: '#tech' },
-      { name: 'AI for Sellers', href: '#careers' },
-      { name: 'AI Communities', href: '#creativity' },
+      { name: 'NY Tech Career', href: '/nytechcareer', external: true },
+      { name: 'AI Frank', href: '#tech' },
+      { name: 'Product Ideas', href: '#careers' },
+      { name: 'Designs & Mockups', href: '#creativity' },
     ],
   },
   { name: 'Careers', href: 'https://www.nytechcareer.com', external: true },
-  { name: 'Products', href: '/products' },
+  { name: 'Ventures', href: '/products' },
+  { name: 'Stream', href: '/stream' },
+  { name: 'Test', href: '/test' },
 ]
 
 export default function NavBar() {
@@ -85,11 +89,11 @@ export default function NavBar() {
 
           {/* Login/Subscribe */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#login" className="text-sm font-medium text-gray-700 hover:text-gray-900">
+            <a href="https://nytechpulse.beehiiv.com/?modal=login" className="text-sm font-medium text-gray-700 hover:text-gray-900">
               Login
             </a>
             <a
-              href="#subscribe"
+              href="https://nytechpulse.beehiiv.com/subscribe"
               className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
             >
               Subscribe

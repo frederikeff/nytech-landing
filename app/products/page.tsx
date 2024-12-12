@@ -15,6 +15,16 @@ const products = [
     link: '/products/ai-content-assistant',
     image: '/api/placeholder/400/300',
   },
+  {
+    id: 2,
+    category: 'our-tools',
+    name: 'NY Tech Career',
+    description: 'AI-powered Learn & Earn Tech Career Model for Interns and Graduates',
+    tags: ['career', 'training', 'automation'],
+    fullDescription: 'Complete content creation suite with SEO optimization, tone adjustment, and multi-format support.',
+    link: '/products/nytechcareer',
+    image: '/api/placeholder/400/300',
+  },
   // Add more products here
 ];
 
@@ -48,7 +58,7 @@ const ProductsPage = () => {
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-gray-900 text-center mb-4">
-          AI-Powered Products
+          Products & Solutions
         </h1>
         <p className="text-xl text-gray-600 text-center mb-8">
           Discover tools and solutions built by our team and community
@@ -88,7 +98,7 @@ const ProductsPage = () => {
               }`}
               onClick={() => setActiveFilter('our-tools')}
             >
-              Our Tools
+              Our Products
             </button>
             <button
               className={`px-4 py-2 rounded-md ${

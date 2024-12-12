@@ -7,10 +7,10 @@ import Link from 'next/link';
 const Footer = () => {
   const footerLinks = {
     platform: [
-      { name: 'Newsletter', href: '#newsletter', external: true },
-      { name: 'Events', href: '#events', external: true },
+      { name: 'Newsletter', href: 'https://nytechpulse.beehiiv.com', external: true },
+      { name: 'Events', href: 'https://lu.ma/nytechcommunity', external: true },
       { name: 'Products', href: '/products' },
-      { name: 'Careers', href: '/careers' }
+      { name: 'Careers', href: 'https://www.nytechcareer.com' }
     ],
     services: [
       { name: 'AI Integration', href: '/services#integration' },

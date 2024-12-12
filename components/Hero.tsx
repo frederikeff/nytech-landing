@@ -8,7 +8,7 @@ export default function Hero() {
               <span className="block text-blue-600">Human Potential and AI Capabilities</span>
             </h1>
             <p className="mt-6 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-8 md:text-xl md:max-w-3xl"> {/* Increased top margin */}
-              Exploring and building AI-powered innovations while connecting creators with the tools and knowledge to bring their ideas to life.
+              We operate at the intersection of innovation, technology, and creativity, bringing fresh perspectives to products, careers, and communities.
             </p>
             <div className="mt-8 max-w-md mx-auto flex flex-col sm:flex-col md:flex-row justify-center items-center gap-4 md:max-w-2xl"> {/* Modified for horizontal desktop layout */}
               
