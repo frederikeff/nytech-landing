@@ -5,7 +5,7 @@ import { Sparkles, Lightbulb, Zap, RefreshCw } from 'lucide-react';
 
 const InnovationLanding = () => {
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <div className="max-w-6xl mx-auto p-6 pt-24 md:pt-32"> {/* Added pt-24 md:pt-32 for top spacing */}
       {/* Hero Section */}
       <div className="text-center mb-16 pt-12">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">

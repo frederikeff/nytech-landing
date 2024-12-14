@@ -10,12 +10,12 @@ const Footer = () => {
       { name: 'Newsletter', href: 'https://nytechpulse.beehiiv.com', external: true },
       { name: 'Events', href: 'https://lu.ma/nytechcommunity', external: true },
       { name: 'Products', href: '/products' },
-      { name: 'Careers', href: 'https://www.nytechcareer.com' }
+      { name: 'Careers', href: '/careers' }
     ],
     services: [
-      { name: 'AI Integration', href: '/services#integration' },
-      { name: 'Custom Development', href: '/services#development' },
-      { name: 'Implementation Support', href: '/services#support' }
+      { name: 'Creative Innovation', href: '/services#creative-innovation-solutions' },
+      { name: 'Founder Success', href: '/services#founder-success-studio' },
+      { name: 'Tech & Systems', href: '/services#tech-&-systems-evolution' }
     ],
     company: [
       { name: 'About', href: '/about' },
@@ -24,8 +24,7 @@ const Footer = () => {
       { name: 'Terms of Service', href: '/terms' }
     ],
     social: [
-      { name: 'Twitter', href: '#twitter', external: true },
-      { name: 'LinkedIn', href: '#linkedin', external: true }
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/company/nytechventures', external: true }
     ]
   };
 

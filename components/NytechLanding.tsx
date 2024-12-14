@@ -3,18 +3,7 @@ import { Sparkles, Bot, Zap, Layout, Users, Calendar, Mail, Code, Lightbulb } fr
 
 const innovations = [
   {
-    title: 'Innovation Stream',
-    description: 'Access our constant flow of ideas, improvements, and creative solutions.',
-    icon: Sparkles,
-    features: [
-      'Fresh perspectives daily',
-      'Cross-domain insights',
-      'Ready-to-use solutions',
-      'Implementation guides'
-    ]
-  },
-  {
-    title: 'Current Ventures',
+    title: 'Live Ventures',
     description: 'Explore our active projects and innovations in development.',
     icon: Zap,
     features: [
@@ -33,6 +22,17 @@ const innovations = [
       'System optimization',
       'AI integration',
       'Process improvement'
+    ]
+  },
+  {
+    title: 'Community Hub',
+    description: 'Connect, learn, and grow with our vibrant ecosystem of founders, creators, and innovators.',
+    icon: Users,
+    features: [
+      'Curated networking events',
+      'Implementation guides & resources',
+      'Ecosystem insights & updates',
+      'Founder collaboration opportunities'
     ]
   },
 ];
@@ -70,16 +70,18 @@ const NytechLanding = () => {
         {/* Current Projects Section */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 md:p-12 text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Explore Our Innovation Stream
+            Join Our Innovation Community
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Access our constant flow of ideas, improvements, and innovative solutions.
+            Connect with fellow founders, creators, and innovators while accessing our wealth of resources and opportunities.
           </p>
           <a
-            href="/stream"
+            href="https://nytechpulse.beehiiv.com/"
+            target="_blank" 
+            rel="noopener noreferrer"
             className="inline-block px-8 py-3 bg-white text-blue-600 rounded-md font-medium hover:bg-blue-50 transition-colors"
           >
-            View Innovation Stream
+            Join Our Community
           </a>
         </div>
 
@@ -121,23 +123,59 @@ const NytechLanding = () => {
           </div>
         </div>
 
+        {/* decorative separator */}   
+        <div className="max-w-4xl mx-auto my-20">
+          <div className="flex items-center justify-center space-x-4">
+            <div className="h-px bg-gray-200 w-full"></div>
+            <div className="flex space-x-2">
+              <span className="h-2 w-2 rounded-full bg-blue-200"></span>
+              <span className="h-2 w-2 rounded-full bg-blue-400"></span>
+              <span className="h-2 w-2 rounded-full bg-blue-600"></span>
+            </div>
+            <div className="h-px bg-gray-200 w-full"></div>
+          </div>
+        </div>
+
         {/* Connect Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-16 mt-16">
-          <div className="text-center p-6">
-            <Users className="w-10 h-10 text-blue-600 mx-auto mb-4" />
-            <h3 className="font-semibold mb-2">Join Our Community</h3>
-            <p className="text-gray-600">Follow us on LinkedIn for daily insights and updates</p>
-          </div>
-          <div className="text-center p-6">
-            <Calendar className="w-10 h-10 text-blue-600 mx-auto mb-4" />
-            <h3 className="font-semibold mb-2">Attend Events</h3>
-            <p className="text-gray-600">Join our NYC and remote events</p>
-          </div>
-          <div className="text-center p-6">
-            <Mail className="w-10 h-10 text-blue-600 mx-auto mb-4" />
-            <h3 className="font-semibold mb-2">Stay Updated</h3>
-            <p className="text-gray-600">Subscribe to our weekly newsletter</p>
-          </div>
+          <a 
+            href="https://www.linkedin.com/company/nytechventures/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block p-6 bg-white rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100"
+          >
+            <div className="text-center">
+              <Users className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Join Our Community</h3>
+              <p className="text-gray-600">Follow us on LinkedIn for daily insights and updates</p>
+            </div>
+          </a>
+          
+          <a 
+            href="https://lu.ma/nytechcommunity" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block p-6 bg-white rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100"
+          >
+            <div className="text-center">
+              <Calendar className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Attend Events</h3>
+              <p className="text-gray-600">Join our NYC and remote events</p>
+            </div>
+          </a>
+          
+          <a 
+            href="https://nytechpulse.beehiiv.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block p-6 bg-white rounded-lg shadow hover:shadow-md transition-shadow border border-gray-100"
+          >
+            <div className="text-center">
+              <Mail className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Stay Updated</h3>
+              <p className="text-gray-600">Subscribe to our weekly newsletter</p>
+            </div>
+          </a>
         </div>
       </div>
   );

@@ -2,61 +2,83 @@
 
 import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
+import Image from 'next/image';
 
 // Sample product data structure
 const products = [
   {
     id: 1,
-    category: 'our-tools',
+    category: 'marketplace',
     name: 'NY Tech Career',
-    description: 'AI-powered Learn & Earn Tech Career Model for Interns and Graduates',
-    tags: ['career', 'training', 'automation'],
-    fullDescription: 'Complete content creation suite with SEO optimization, tone adjustment, and multi-format support.',
+    description: 'AI-powered career development platform for tech talents',
+    tags: ['careers', 'education', 'technology'],
+    fullDescription: 'Innovative learning and earning platform that combines AI-driven skill assessment, personalized career mapping, and paid internship opportunities for emerging tech professionals.',
     link: '/products/nytechcareer',
-    image: '/api/placeholder/400/300',
+    image: '/images/products/nytechcareer.webp',
+    width: 400,
+    height: 300,
   },
   {
     id: 2,
-    category: 'our-tools',
+    category: 'saas',
     name: 'Frank AI',
-    description: 'Ai-powered legal and paralegal contract and document creator',
-    tags: ['law', 'legal', 'contracts'],
-    fullDescription: 'Complete content creation suite with SEO optimization, tone adjustment, and multi-format support.',
+    description: 'AI-powered legal document automation platform',
+    tags: ['legal', 'automation', 'contracts'],
+    fullDescription: 'Advanced legal document creation system that leverages AI to generate, analyze, and optimize contracts and legal documentation with professional-grade accuracy.',
     link: '/products/frankai',
-    image: '/api/placeholder/400/300',
+    image: '/images/products/frankai.webp',
+    width: 400,
+    height: 300,
   },
   {
     id: 3,
-    category: 'our-tools',
+    category: 'saas',
     name: 'Scriptsmithy',
-    description: 'AI Writing Tool for complete scripts and storylines for writers and entertainers',
-    tags: ['writing', 'narratives', 'storylines'],
-    fullDescription: 'Complete content creation suite with SEO optimization, tone adjustment, and multi-format support.',
+    description: 'AI-powered creative writing and script development platform',
+    tags: ['writing', 'entertainment', 'creative'],
+    fullDescription: 'Sophisticated storytelling platform that employs AI to assist in creating, structuring, and refining scripts and narratives across multiple entertainment formats.',
     link: '/products/scriptsmithy',
-    image: '/api/placeholder/400/300',
+    image: '/images/products/scriptsmithy.webp',
+    width: 400,
+    height: 300,
   },
   {
     id: 4,
-    category: 'our-tools',
-    name: 'AI Content Assistant',
-    description: 'Automated content creation and optimization tool powered by advanced AI',
-    tags: ['content-creation', 'marketing', 'automation'],
-    fullDescription: 'Complete content creation suite with SEO optimization, tone adjustment, and multi-format support.',
+    category: 'marketplace',
+    name: 'IntroVault',
+    description: 'Smart marketplace for professional warm introductions',
+    tags: ['networking', 'introductions', 'business'],
+    fullDescription: 'Automated introduction marketplace platform that facilitates and monetizes professional networking by connecting seekers with valuable business contacts through verified intermediaries.',
     link: '/products/ai-content-assistant',
-    image: '/api/placeholder/400/300',
+    image: '/images/products/introvault.webp',
+    width: 400,
+    height: 300,
   },
   {
     id: 5,
-    category: 'our-tools',
+    category: 'saas',
     name: 'SubStat',
-    description: 'Automated Subscription Management',
-    tags: ['ideation', 'automation', 'gamification'],
-    fullDescription: 'Complete content creation suite with SEO optimization, tone adjustment, and multi-format support.',
+    description: 'Automated subscription management and analytics platform',
+    tags: ['subscriptions', 'analytics', 'billing'],
+    fullDescription: 'Comprehensive subscription management system that streamlines recurring billing, provides detailed analytics, and automates customer lifecycle workflows.',
     link: '/products/substat',
-    image: '/api/placeholder/400/300',
+    image: '/images/products/substat.webp',
+    width: 400,
+    height: 300,
   },
-  // Add more products here
-];
+  {
+    id: 6,
+    category: 'community',
+    name: 'NYTech AI Women',
+    description: 'Empowering community for women in NYC tech and AI',
+    tags: ['community', 'technology', 'networking'],
+    fullDescription: 'Dynamic professional network that provides women in technology and AI with mentorship opportunities, resource sharing, and strategic connections to accelerate their entrepreneurial success.',
+    link: '/products/nytechaiwomen',
+    image: '/images/products/nytechaiwomen.webp',
+    width: 400,
+    height: 300,
+  },
+]
 
 const ProductsPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -122,13 +144,23 @@ const ProductsPage = () => {
             </button>
             <button
               className={`px-4 py-2 rounded-md ${
-                activeFilter === 'our-tools' 
+                activeFilter === 'saas' 
                   ? 'bg-blue-600 text-white' 
                   : 'bg-white text-gray-600 hover:bg-gray-100'
               }`}
-              onClick={() => setActiveFilter('our-tools')}
+              onClick={() => setActiveFilter('saas')}
             >
-              Our Products
+              SaaS
+            </button>
+            <button
+              className={`px-4 py-2 rounded-md ${
+                activeFilter === 'marketplace' 
+                  ? 'bg-blue-600 text-white' 
+                  : 'bg-white text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setActiveFilter('marketplace')}
+            >
+              Marketplace
             </button>
             <button
               className={`px-4 py-2 rounded-md ${
@@ -138,7 +170,7 @@ const ProductsPage = () => {
               }`}
               onClick={() => setActiveFilter('community')}
             >
-              Community Products
+              Community
             </button>
           </div>
         </div>
@@ -154,9 +186,11 @@ const ProductsPage = () => {
               onMouseEnter={() => setActiveCard(product.id)}
               onMouseLeave={() => setActiveCard(null)}
             >
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
+                width={product.width}
+                height={product.height}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -178,6 +212,8 @@ const ProductsPage = () => {
                 </div>
                 <a
                   href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                 >
                   Learn More

@@ -17,8 +17,8 @@ const navigation = [
     external: true 
   },
   { name: 'Ventures', href: '/products'},
-  { name: 'Careers', href: 'https://www.nytechcareer.com', external: true },
-  { name: 'Stream', href: '/stream' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Women Founders', href: '/women' },
 ]
 
 export default function NavBar() {
