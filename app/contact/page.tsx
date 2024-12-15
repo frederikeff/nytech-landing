@@ -6,13 +6,13 @@ import { Mail, Users, Calendar } from 'lucide-react';
 const ContactPage = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: FormEvent<HTLMFormElement>) => {
       e.preventDefault();
       // Show the success message
       setIsSubmitted(true);
       
       // Optional: Reset form
-      e.target.reset();
+      (e.target as HTMLFormElement).reset();
       
       // Optional: Hide success message after 5 seconds
       setTimeout(() => {
