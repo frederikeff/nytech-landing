@@ -74,8 +74,8 @@ const PrivacyPolicy = () => {
             <p className="text-gray-600 mb-4">
               If you have questions about this Privacy Policy, please contact us at:
               <br />
-              <a href="mailto:privacy@nytech.com" className="text-blue-600 hover:text-blue-700">
-                hi@nytechventures.com
+              <a href="mailto:hello@nytechventures.com" className="text-blue-600 hover:text-blue-700">
+                hello@nytechventures.com
               </a>
             </p>
           </section>

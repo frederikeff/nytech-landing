@@ -48,7 +48,7 @@ const ServicesPage = () => {
           Innovation & Community
         </h1>
         <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-          We're passionate about solving problems creatively, supporting founders, and building technology that makes a difference. Let's create something amazing together.
+          We&apos;re passionate about solving problems creatively, supporting founders, and building technology that makes a difference. Let&apos;s create something amazing together.
         </p>
 
         {/* Services Grid */}
@@ -81,10 +81,10 @@ const ServicesPage = () => {
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 md:p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Let's Create Something Amazing
+            Let&apos;s Create Something Amazing
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Whether you're looking to innovate, connect, or transform your ideas into reality, we're here to help you succeed.
+            Whether you&apos;re looking to innovate, connect, or transform your ideas into reality, we&apos;re here to help you succeed.
           </p>
           <a
             href="https://calendly.com/nytechventures/30-minute-meeting"

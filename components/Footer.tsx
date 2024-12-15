@@ -44,7 +44,7 @@ const Footer = () => {
                 />
             </Link>
             <p className="text-gray-600 mb-4 max-w-sm">
-            Empowering innovation through creative technology solutions. Building tomorrow's digital landscape at the intersection of ideas and execution.
+            Empowering innovation through creative technology solutions. Building tomorrow&apos;s digital landscape at the intersection of ideas and execution.
             </p>
             <div className="flex space-x-4">
               {footerLinks.social.map((item) => (

@@ -13,7 +13,7 @@ const AboutPage = () => {
             Innovation Through <span className="text-blue-600">Creativity</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We're building tomorrow's digital landscape at the intersection of ideas and execution, fostering innovation and supporting founders on their journey.
+            We&apos;re building tomorrow&apos;s digital landscape at the intersection of ideas and execution, fostering innovation and supporting founders on their journey.
           </p>
         </div>
 
@@ -31,7 +31,7 @@ const AboutPage = () => {
             {
               icon: Sparkles,
               title: "Innovation First",
-              description: "We constantly explore new ideas and approaches, pushing the boundaries of what's possible in technology and business."
+              description: "We constantly explore new ideas and approaches, pushing the boundaries of what&apos;s possible in technology and business."
             },
             {
               icon: Users,
@@ -41,7 +41,7 @@ const AboutPage = () => {
             {
               icon: Heart,
               title: "Inclusive Growth",
-              description: "We're committed to making technology and innovation accessible to all, fostering diverse perspectives and ideas."
+              description: "We&apos;re committed to making technology and innovation accessible to all, fostering diverse perspectives and ideas."
             }
           ].map((value, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-8">
@@ -99,7 +99,7 @@ const AboutPage = () => {
             Join Our Journey
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Whether you're a founder, creator, or innovator, there's a place for you in our community. Let's build something amazing together.
+            Whether you&apos;re a founder, creator, or innovator, there&apos;s a place for you in our community. Let&apos;s build something amazing together.
           </p>
           <div className="flex justify-center gap-4">
             <a

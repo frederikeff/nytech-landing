@@ -29,7 +29,7 @@ const ContactPage = () => {
             Get in Touch
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have a question or want to collaborate? We'd love to hear from you.
+            Have a question or want to collaborate? We&apos;d love to hear from you.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ const ContactPage = () => {
             <div className="bg-white rounded-lg shadow-sm p-8">
               {isSubmitted && (
                 <div className="mb-6 p-4 bg-green-50 text-green-700 rounded-md">
-                  Thank you for your message! We'll get back to you soon.
+                  Thank you for your message! We&apos;ll get back to you soon.
                 </div>
               )}
               <form 

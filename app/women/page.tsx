@@ -28,7 +28,7 @@ const supportAreas = [
   },
   {
     title: 'Visibility & Growth',
-    description: "Amplifying women founders' voices and creating opportunities for venture growth and success.",
+    description: "Amplifying women founders&apos; voices and creating opportunities for venture growth and success.",
     icon: Award,
     features: [
       'Pitch deck optimization',
@@ -57,7 +57,7 @@ const WomenFoundersPage = () => {
             Why It Matters
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            In today's tech landscape, women founders remain significantly underrepresented, especially in AI and technology sectors. We're changing that by making tech more accessible, building supportive communities, and creating opportunities for growth and visibility.
+            In today&apos;s tech landscape, women founders remain significantly underrepresented, especially in AI and technology sectors. We're changing that by making tech more accessible, building supportive communities, and creating opportunities for growth and visibility.
           </p>
         </div>
 
