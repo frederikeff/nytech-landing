@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import { Mail, MapPin, Users, Calendar } from 'lucide-react';
+import { Mail, Users, Calendar } from 'lucide-react';
 
 const ContactPage = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
