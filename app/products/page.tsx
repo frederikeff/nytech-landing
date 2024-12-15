@@ -13,7 +13,7 @@ const products = [
     description: 'AI-powered career development platform for tech talents',
     tags: ['careers', 'education', 'technology'],
     fullDescription: 'Innovative learning and earning platform that combines AI-driven skill assessment, personalized career mapping, and paid internship opportunities for emerging tech professionals.',
-    link: '/products/nytechcareer',
+    link: 'https://www.nytechcareer.com',
     image: '/images/products/nytechcareer.webp',
     width: 400,
     height: 300,
@@ -25,7 +25,7 @@ const products = [
     description: 'AI-powered legal document automation platform',
     tags: ['legal', 'automation', 'contracts'],
     fullDescription: 'Advanced legal document creation system that leverages AI to generate, analyze, and optimize contracts and legal documentation with professional-grade accuracy.',
-    link: '/products/frankai',
+    link: 'https://www.frankai.io/',
     image: '/images/products/frankai.webp',
     width: 400,
     height: 300,
@@ -37,7 +37,7 @@ const products = [
     description: 'AI-powered creative writing and script development platform',
     tags: ['writing', 'entertainment', 'creative'],
     fullDescription: 'Sophisticated storytelling platform that employs AI to assist in creating, structuring, and refining scripts and narratives across multiple entertainment formats.',
-    link: '/products/scriptsmithy',
+    link: 'https://www.scriptsmithy.ai',
     image: '/images/products/scriptsmithy.webp',
     width: 400,
     height: 300,
@@ -45,12 +45,12 @@ const products = [
   {
     id: 4,
     category: 'marketplace',
-    name: 'IntroVault',
+    name: 'RelationGuru',
     description: 'Smart marketplace for professional warm introductions',
     tags: ['networking', 'introductions', 'business'],
     fullDescription: 'Automated introduction marketplace platform that facilitates and monetizes professional networking by connecting seekers with valuable business contacts through verified intermediaries.',
-    link: '/products/ai-content-assistant',
-    image: '/images/products/introvault.webp',
+    link: 'https://calendly.com/nytechventures/30-minute-meeting',
+    image: '/images/products/relationguru.webp',
     width: 400,
     height: 300,
   },
@@ -61,7 +61,7 @@ const products = [
     description: 'Automated subscription management and analytics platform',
     tags: ['subscriptions', 'analytics', 'billing'],
     fullDescription: 'Comprehensive subscription management system that streamlines recurring billing, provides detailed analytics, and automates customer lifecycle workflows.',
-    link: '/products/substat',
+    link: 'https://calendly.com/nytechventures/30-minute-meeting',
     image: '/images/products/substat.webp',
     width: 400,
     height: 300,
@@ -73,11 +73,59 @@ const products = [
     description: 'Empowering community for women in NYC tech and AI',
     tags: ['community', 'technology', 'networking'],
     fullDescription: 'Dynamic professional network that provides women in technology and AI with mentorship opportunities, resource sharing, and strategic connections to accelerate their entrepreneurial success.',
-    link: '/products/nytechaiwomen',
+    link: 'https://calendly.com/nytechventures/30-minute-meeting',
     image: '/images/products/nytechaiwomen.webp',
     width: 400,
     height: 300,
   },
+  {
+    id: 7,
+    category: 'saas',
+    name: 'PitchFlow',
+    description: 'AI-powered presentation generator and audience adaptation tool',
+    tags: ['presentations', 'ai', 'pitching'],
+    fullDescription: 'Intelligent presentation creation platform that automatically generates pitch decks, adapts content to specific audiences, and optimizes messaging using AI technology.',
+    link: 'https://calendly.com/nytechventures/30-minute-meeting',
+    image: '/images/products/pitchflow.webp',
+    width: 400,
+    height: 300,
+  },
+  {
+      id: 8,
+      category: 'ecommerce',
+      name: 'PawStyle',
+      description: 'Premium protective footwear for dogs with comfort-first design system',
+      tags: ['pets', 'footwear', 'accessories'],
+      fullDescription: 'Revolutionary dog footwear brand offering custom-sized protective shoes that ensure maximum comfort and safety for pets, featuring weather-resistant materials and orthopedic support.',
+      link: 'https://calendly.com/nytechventures/30-minute-meeting',
+      image: '/images/products/pawstyle.webp',
+      width: 400,
+      height: 300,
+  }, 
+  {
+    id: 9,
+    category: 'media',
+    name: 'AI Sidekicks',
+    description: 'Interactive AI learning platform with friendly character guidance',
+    tags: ['education', 'ai', 'technology'],
+    fullDescription: 'Innovative educational platform featuring AI companion characters that provide personalized guidance through complex AI concepts with an approachable, engaging learning experience.',
+    link: 'https://calendly.com/nytechventures/30-minute-meeting',
+    image: '/images/products/aisidekicks.webp',
+    width: 400,
+    height: 300,
+  },
+  {
+    id: 10,
+    category: 'media',
+    name: 'TIRIDA Pals',
+    description: 'Magical digital companion world with friendly creature adventures', // Same 56 chars
+    tags: ['children', 'gaming', 'education'],
+    fullDescription: 'Enchanting digital platform featuring magical creature companions that guide children through wonder-filled adventures while fostering creativity and learning engagement.', // Same 143 chars
+    link: 'https://calendly.com/nytechventures/30-minute-meeting',
+    image: '/images/products/tirida.webp',
+    width: 400,
+    height: 300,
+  }
 ]
 
 const ProductsPage = () => {
@@ -171,6 +219,26 @@ const ProductsPage = () => {
               onClick={() => setActiveFilter('community')}
             >
               Community
+            </button>
+            <button
+              className={`px-4 py-2 rounded-md ${
+                activeFilter === 'ecommerce' 
+                  ? 'bg-blue-600 text-white' 
+                  : 'bg-white text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setActiveFilter('ecommerce')}
+            >
+              ECommerce
+            </button>
+            <button
+              className={`px-4 py-2 rounded-md ${
+                activeFilter === 'media' 
+                  ? 'bg-blue-600 text-white' 
+                  : 'bg-white text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setActiveFilter('media')}
+            >
+              Media
             </button>
           </div>
         </div>

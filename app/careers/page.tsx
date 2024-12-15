@@ -15,7 +15,7 @@ const jobs = [
       fullDescription: 'Lead the growth initiatives for an AI-powered legal tech company. You will be responsible for implementing AI-driven marketing strategies, analyzing growth metrics, and scaling user acquisition through innovative approaches.',
       location: 'New York / Remote',
       type: 'Full-time',
-      link: '/careers/ai-growth-manager',
+      link: 'mailto:application@nytechcareer.com',
       icon: LineChart
     },
     {
@@ -28,7 +28,7 @@ const jobs = [
       fullDescription: 'Drive sales strategies for an innovative blockchain-based real estate investment platform. You will be responsible for building client relationships, developing sales strategies, and expanding market presence.',
       location: 'New York / Remote',
       type: 'Full-time',
-      link: '/careers/sales-manager',
+      link: 'mailto:application@nytechcareer.com',
       icon: Building2
     },
     {
@@ -41,7 +41,7 @@ const jobs = [
       fullDescription: 'Develop and execute digital marketing strategies for an AI-powered writing platform. You will oversee content strategy, campaign management, and growth initiatives.',
       location: 'Remote',
       type: 'Full-time',
-      link: '/careers/digital-marketing-manager',
+      link: 'mailto:application@nytechcareer.com',
       icon: Rocket
     },
     {
@@ -54,20 +54,20 @@ const jobs = [
       fullDescription: 'Spearhead lead generation efforts for an AI-powered legal tech platform. You will be responsible for developing and implementing strategies to attract and qualify potential clients.',
       location: 'New York / Remote',
       type: 'Full-time',
-      link: '/careers/lead-generation-manager',
+      link: 'mailto:application@nytechcareer.com',
       icon: Users
     },
     {
       id: 5,
       category: 'community',
       title: 'Community Support Manager',
-      company: 'NY Tech Ventures',
+      company: 'NYTech AI Women',
       description: 'Support and grow our Women in Tech and AI Community',
       tags: ['Community', 'Tech', 'Women in Tech'],
       fullDescription: 'Build and nurture our thriving women in tech community. You will organize events, facilitate connections, and create valuable experiences for community members.',
       location: 'New York / Remote',
       type: 'Full-time',
-      link: '/careers/community-support',
+      link: 'mailto:application@nytechcareer.com',
       icon: MessageSquare
     }
   ];

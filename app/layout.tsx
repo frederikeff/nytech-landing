@@ -8,8 +8,8 @@ import Footer from '@/components/Footer'  // Update path if different
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'NYTech - Building Bridges Between Human Potential and AI Capabilities',
-  description: 'Exploring and building AI-powered innovations while connecting creators with the tools and knowledge to bring their ideas to life.',
+  title: 'NYTech - Innovation Through Technology & Community',
+  description: 'Building AI-powered solutions and fostering an inclusive tech ecosystem where innovators and founders can transform their ideas into impactful ventures.',
   icons: {
     icon: [
       { url: '/images/favicon.ico' },
