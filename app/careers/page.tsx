@@ -76,7 +76,7 @@ const CareersPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState('all');
   const [filteredJobs, setFilteredJobs] = useState(jobs);
-  const [activeCard, setActiveCard] = useState(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   // Filter jobs based on search and category
   useEffect(() => {
