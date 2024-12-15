@@ -1,7 +1,7 @@
 'use client' 
 
 import React from 'react';
-import { Network, Sparkles, Users, Zap, Target, Presentation, Award, Rocket } from 'lucide-react';
+import { Network, Sparkles, Users, Target, Presentation, Award, Rocket } from 'lucide-react';
 
 const supportAreas = [
   {

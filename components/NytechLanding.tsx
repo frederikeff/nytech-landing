@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Bot, Zap, Layout, Users, Calendar, Mail, Code, Lightbulb } from 'lucide-react';
+import { Bot, Zap, Layout, Users, Calendar, Mail, Code, Lightbulb } from 'lucide-react';
 
 const innovations = [
   {

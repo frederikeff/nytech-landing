@@ -1,7 +1,7 @@
 'use client' 
 
 import React from 'react';
-import { Sparkles, Users, Zap, Layout, Lightbulb, Rocket } from 'lucide-react';
+import { Sparkles, Users, Zap, Lightbulb, Rocket } from 'lucide-react';
 
 const services = [
   {
