@@ -1,6 +1,8 @@
 // app/layout.tsx
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
+import CookieConsent from '@/components/CookieConsent'
 import './globals.css'
 import NavBar from '@/components/NavBar'  // Update path if different
 import Footer from '@/components/Footer'  // Update path if different
@@ -99,6 +101,8 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <CookieConsent />
+          <Analytics />
         </div>
       </body>
     </html>
