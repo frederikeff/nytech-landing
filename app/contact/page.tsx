@@ -1,12 +1,12 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import { Mail, Users, Calendar } from 'lucide-react';
 
 const ContactPage = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleSubmit = (e: FormEvent<HTLMFormElement>) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       // Show the success message
       setIsSubmitted(true);
