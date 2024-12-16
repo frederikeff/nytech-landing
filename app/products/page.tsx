@@ -132,7 +132,7 @@ const ProductsPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState('all');
   const [filteredProducts, setFilteredProducts] = useState(products);
-  const [activeCard, setActiveCard] = useState(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   // Filter products based on search and category
   useEffect(() => {
