@@ -8,8 +8,22 @@ import Footer from '@/components/Footer'  // Update path if different
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('uttps://nytechventures.com'),
   title: 'NYTech - Innovation Through Technology & Community',
-  description: 'Building AI-powered solutions and fostering an inclusive tech ecosystem where innovators and founders can transform their ideas into impactful ventures.',
+  description: 'Building AI-powered solutions and fostering an inclusive tech ecosystem where especially female innovators and founders can transform their ideas into impactful ventures.',
+  keywords: [
+    'tech innovation',
+    'women in tech',
+    'AI solutions',
+    'tech community',
+    'founder support',
+    'NYC tech',
+    'technology solutions',
+    'startup community'
+  ],
+  authors: [{ name: 'NYTech Ventures'}],
+  creator: 'NYTech Ventures',
+  publisher: 'NYTech Ventures',
   icons: {
     icon: [
       { url: '/images/favicon.ico' },
@@ -22,6 +36,52 @@ export const metadata: Metadata = {
     other: [
       { url: '/images/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
     ],
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://nytechventures.com',
+    siteName: 'NYTech Ventures',
+    title: 'NYTech - Innovation Through Technology & Community',
+    description: 'Building AI-powered solutions and fostering an inclusive tech ecosystem where especially female innovators and founders can transform their ideas into impactful ventures.',
+    images: [
+      {
+        url: '/images/og-image.jpg', // You'll need to create this
+        width: 1200,
+        height: 630,
+        alt: 'NYTech Ventures - Building Creative Tech Solutions & Communities',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NYTech - Innovation Through Technology & Community',
+    description: 'Building AI-powered solutions and fostering an inclusive tech ecosystem.',
+    site: '@YFrederikeFalke', // Update with your Twitter handle
+    creator: '@FrederikeFalke', // Update with your Twitter handle
+    images: ['/images/og-image.jpg'], // Same image as OpenGraph
+  },
+  social: {
+    linkedin: {
+      handle: 'frederikefalke',
+      organizationID: 'nytechventures',
+    },
+    youtube: 'frederikefalke',
+    instagram: 'frederikefalke',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    }
+  },
+  alternates: {
+    cannonical: 'https://nytechventures.com',
   },
 }
 

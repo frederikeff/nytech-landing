@@ -17,8 +17,8 @@ const Hero = () => {
 
           {/* Description - keeping original styling */}
           <p className="mt-6 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-8 md:text-xl md:max-w-3xl">
-            We operate at the intersection of innovation, technology, and creativity, 
-            bringing fresh perspectives to products, careers, and communities.
+            We transform ideas into impactful tech products 
+            while fostering a vibrant NYC tech ecosystem.
           </p>
 
           {/* Buttons - maintaining original layout and style */}
