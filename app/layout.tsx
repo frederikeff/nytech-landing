@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     }
   },
   alternates: {
-    cannonical: 'https://nytechventures.com',
+    canonical: 'https://nytechventures.com',
   },
 }
 
