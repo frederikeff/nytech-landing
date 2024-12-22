@@ -87,18 +87,6 @@ export const metadata: ExtendedMetadata = {
         height: 630,
         alt: 'NYTech Ventures - Building Creative Tech Solutions & Communities',
       }
-    ],
-    // Add social profiles to OpenGraph
-    profile: {
-      firstName: 'Frederike',
-      lastName: 'Falke',
-      username: 'frederikefalke'
-    },
-    // Add social links as sameAs array
-    sameAs: [
-      'https://linkedin.com/in/frederikefalke',
-      'https://youtube.com/@frederikefalke',
-      'https://instagram.com/frederikefalke'
     ]
   },
 
