@@ -4,6 +4,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Clock, Users, Instagram, Calendar } from 'lucide-react'
+import { useState } from 'react'
 
 interface SuccessMetric {
   icon: React.ReactNode;
@@ -89,33 +90,49 @@ const FeaturedCaseStudy = () => {
   );
 };
 
-const CaseStudyCard = ({ study }: { study: CaseStudy }) => (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-      <div className="relative aspect-[4/3] w-full">
-        <Image
-          src={study.image.src}
-          alt={study.image.alt}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          loading="lazy"
-        />
+const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
+    const [isLoading, setIsLoading] = useState(true);
+    const [hasError, setHasError] = useState(false);
+    
+    return (
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div className="relative aspect-[4/3] w-full">
+          {!hasError && (
+            <Image
+              src={study.image.src}
+              alt={study.image.alt}
+              fill
+              className={`object-cover transition-opacity duration-300 ${
+                isLoading ? 'opacity-0' : 'opacity-100'
+              }`}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onLoadingComplete={() => setIsLoading(false)}
+              onError={() => setHasError(true)}
+              priority={true}
+            />
+          )}
+          {hasError && (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+              <span className="text-gray-400">Image not available</span>
+            </div>
+          )}
+        </div>
+        <div className="p-6">
+          <h3 className="text-xl font-semibold mb-4">{study.title}</h3>
+          <p className="text-gray-600 mb-4">{study.description}</p>
+          <ul className="space-y-2 mb-4">
+            {study.metrics.map((metric, index) => (
+              <li key={index} className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                {metric}
+              </li>
+            ))}
+          </ul>
+          <p className="font-semibold text-blue-600">{study.results}</p>
+        </div>
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-4">{study.title}</h3>
-        <p className="text-gray-600 mb-4">{study.description}</p>
-        <ul className="space-y-2 mb-4">
-          {study.metrics.map((metric, index) => (
-            <li key={index} className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
-              {metric}
-            </li>
-          ))}
-        </ul>
-        <p className="font-semibold text-blue-600">{study.results}</p>
-      </div>
-    </div>
-  );
+    );
+}; // Added missing cl
 
 export default function SuccessStoriesPage() {
   const caseStudies: CaseStudy[] = [
@@ -132,7 +149,7 @@ export default function SuccessStoriesPage() {
       results: "10k revenue in first month", 
       image: {
         src: "/images/success-stories/customer-success.png",
-        alt: "Baby Blankets E-commerce Launch",
+        alt: "Customer Success School Tech Launch",
         width: 800,
         height: 600
       }
@@ -149,7 +166,7 @@ export default function SuccessStoriesPage() {
       ],
       results: "10 clients in first month", 
       image: {
-        src: "/images/success-stories/sheeps-success.png",
+        src: "/images/success-stories/baby-blankets.png",
         alt: "Sheep and Goats Ecommerce Launch",
         width: 800,
         height: 600
