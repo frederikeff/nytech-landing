@@ -148,7 +148,7 @@ export default function SuccessStoriesPage() {
       ],
       results: "10k revenue in first month", 
       image: {
-        src: "/images/success-stories/customer-success.png",
+        src: "/images/success-stories/cschool-success.png",
         alt: "Customer Success School Tech Launch",
         width: 800,
         height: 600
