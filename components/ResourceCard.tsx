@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { urlForImage } from '@/sanity/lib/image' 
 
 interface ResourceCardProps {
   resource: {
