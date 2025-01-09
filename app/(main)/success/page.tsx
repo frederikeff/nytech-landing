@@ -162,18 +162,6 @@ const successStories = [
     height: 300,
   },
   {
-    id: 18,
-    category: ['digital-selling', 'customer-success'],
-    name: 'Corporate Digital Transformation',
-    description: 'Digital selling program for 2000+ bankers',
-    tags: ['digital selling', 'banking', 'transformation'],
-    fullDescription: 'Implemented comprehensive digital selling program for global bank, enabling traditional bankers to excel in digital-first client engagement.',
-    results: ['2000+ participants', 'Global rollout', 'Digital adoption'],
-    image: '/images/success-stories/banking-1.webp',
-    width: 400,
-    height: 300,
-  },
-  {
     id: 19,
     category: ['community'],
     name: 'Innovation Community Leadership',

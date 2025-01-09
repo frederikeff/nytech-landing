@@ -135,7 +135,7 @@ export default function LinkedinLanding() {
             features={[
               "Growth & GTM consulting",
               "Enterprise client management",
-              "Client product onboarding"
+              "Startup Launch in 7 Days"
             ]}
             ctaText="Book a Meeting"
             ctaLink="https://calendly.com/your-link"
