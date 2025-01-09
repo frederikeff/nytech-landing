@@ -138,8 +138,7 @@ export default function LinkedinLanding() {
               "Startup Launch in 7 Days"
             ]}
             ctaText="Book a Meeting"
-            ctaLink="https://calendly.com/your-link"
-            isExternal={true}
+            ctaLink="/launch-package"
             color="blue"
           />
         </div>

@@ -163,7 +163,7 @@ const LaunchPackagePage = () => {
               Want to know how Rike launched within a week and got her first 500 subscribers?
             </p>
             <Link 
-              href="/success-stories"
+              href="/successes"
               className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700"
             >
               Read Success Story
