@@ -9,6 +9,7 @@ interface ServiceCardProps {
   ctaLink: string;
   price?: string;
   color: 'blue' | 'purple' | 'green';
+  isExternal?: boolean;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -18,7 +19,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   ctaText,
   ctaLink,
   price,
-  color
+  color,
+  isExternal = false
 }) => {
   const colorClasses = {
     blue: 'bg-blue-600',
@@ -31,6 +33,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     purple: 'text-purple-600',
     green: 'text-green-600'
   };
+
+  const linkClasses = `block w-full text-white text-center py-3 rounded-lg font-semibold transition-colors ${colorClasses[color]} hover:opacity-90`;
 
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
@@ -59,12 +63,23 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             {price}
           </div>
         )}
-        <Link 
-          href={ctaLink}
-          className={`block w-full text-white text-center py-3 rounded-lg font-semibold transition-colors ${colorClasses[color]} hover:opacity-90`}
-        >
-          {ctaText}
-        </Link>
+        {isExternal ? (
+          <a 
+            href={ctaLink}
+            className={linkClasses}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {ctaText}
+          </a>
+        ) : (
+          <Link 
+            href={ctaLink}
+            className={linkClasses}
+          >
+            {ctaText}
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -95,7 +110,8 @@ export default function LinkedinLanding() {
               "Real-world experience from day one"
             ]}
             ctaText="Apply Now"
-            ctaLink="/nytechcareer-landing"
+            ctaLink="https://www.nytechcareer.com"
+            isExternal={true}
             color="green"
           />
 
@@ -103,12 +119,13 @@ export default function LinkedinLanding() {
             icon={<Users size={48} />}
             title="NYTech AI Community"
             features={[
-              "Upcoming Tech & AI events",
+              "Upcoming AI events",
               "AI innovation insights",
               "Community updates"
             ]}
             ctaText="Sign Up"
             ctaLink="https://nytechpulse.beehiiv.com/"
+            isExternal={true}
             color="purple"
           />
 
@@ -121,7 +138,8 @@ export default function LinkedinLanding() {
               "Client product onboarding"
             ]}
             ctaText="Book a Meeting"
-            ctaLink="https://calendly.com/nytechventures/30-minute-meeting"
+            ctaLink="https://calendly.com/your-link"
+            isExternal={true}
             color="blue"
           />
         </div>
@@ -130,8 +148,10 @@ export default function LinkedinLanding() {
         <div className="bg-white rounded-xl shadow-lg p-8 mb-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Latest Updates</h2>
           <div className="space-y-4">
-            <Link
+            <a
               href="https://lu.ma/nytechevents"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-between p-4 hover:bg-gray-50 rounded-lg transition-colors group"
             >
               <div>
@@ -139,7 +159,7 @@ export default function LinkedinLanding() {
                 <p className="text-gray-600">Join our upcoming community event</p>
               </div>
               <ArrowRight className="text-gray-400 group-hover:text-blue-600 transform group-hover:translate-x-1 transition-all" />
-            </Link>
+            </a>
     
             <Link
               href="/success-stories"

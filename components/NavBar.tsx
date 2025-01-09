@@ -18,6 +18,7 @@ const navigation = [
   },
   { name: 'Ventures', href: '/products'},
   { name: 'Careers', href: '/careers' },
+  { name: 'Success Stories', href: '/success' },
   { name: 'Women Founders', href: '/women' },
 ]
 
